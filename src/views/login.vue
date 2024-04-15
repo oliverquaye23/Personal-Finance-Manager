@@ -3,7 +3,7 @@
     <div class="left">
         <form >
             <h1>Login to medallion</h1>
-            <p>Don't have an account? <span><a href="#">Sign up</a></span></p>
+            <p>Don't have an account? <span><a href="/">Sign up</a></span></p>
             <div class="form-inner">
                 <label for="email">Email</label>
                 <input type="text" placeholder="Enter your email">
