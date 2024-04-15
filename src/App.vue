@@ -1,15 +1,18 @@
 <template>
-  <register/>
+
+      <router-view></router-view>
+   
+  
 </template>
 
 <script>
-import register from './components/register.vue'
-export default {
-  components: { register },
+import register from './views/register.vue'
 
+export default {
+  name: 'App',
+
+  data: () => ({
+    //
+  }),
 }
 </script>
-
-<style>
-
-</style>
