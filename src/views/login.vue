@@ -19,7 +19,7 @@
         </form>
     </div>
     <div class="right">
-        <img :src="require('@/assets/card.jpg')" alt="Card Image">
+        <img :src="require('@/assets/login.svg')" alt="Card Image">
     </div>
    </div>
   
@@ -76,13 +76,12 @@ form{
   align-items: center;
   width: 50%; 
   height: 100vh; 
-  background-color: #f0f0f0; 
 }
 
 img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
+  width: 80%; 
+  height: 80%; 
+  
 }
 span a{
     text-decoration: none;
