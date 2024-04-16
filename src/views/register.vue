@@ -6,7 +6,7 @@
             <p>Already have an account? <span><a href="/login">Login</a></span></p>
             <div class="form-inner">
                 <label for="email">Email</label>
-                <input type="text" placeholder="Enter your email to get started">
+                <input type="text" placeholder="Enter your email">
                 <label for="password">Password</label>
                 <input type="text" placeholder="Enter your password">
                 <label for="confirm-password">Confirm password</label>

@@ -6,13 +6,18 @@ import Landingpage from '@/views/landingpage.vue';
 const routes = [
   {
     path: '/',
-    name: 'Register',
+    name: 'landing page',
     component: Landingpage
   },
   {
     path: '/login',
     name: 'login',
     component: login
+  },
+  {
+    path: '/signup',
+    name: 'register',
+    component: Register
   }
 ];
 
