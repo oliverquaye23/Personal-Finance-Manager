@@ -27,7 +27,7 @@
       management on this platform.
     </p>
     <button  class="cta" style="margin-bottom: 2rem;">
-      <RouterLink to="/signup" style="color: white;">Get started<img :src="require('@/assets/arrow.svg')" alt="arrrow" class="arrow"></RouterLink>
+      <RouterLink to="/dashboard" style="color: white;">Get started<i class="bi bi-arrow-right" style="color: white;"></i></RouterLink>
       
     </button>
     
@@ -260,15 +260,13 @@ nav ul li a:hover::after {
  .cta{
   background-color: black;
   color: white;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 100;
   border: none;
   padding: 3px 10px 3px 10px;
   border-radius: 18px;
  }
- .arrow{
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
-}
+ 
 .left-col{
   text-align: center;
   margin:  5em 0px 0px 10em;
@@ -365,8 +363,9 @@ p{
 .border{
   width: 160px;
   height: 5px;
-  background: #6ab04c;
+  background: #079979;
   margin: 26px auto;
+  border: none;
 }
 .row{
   display: flex;
