@@ -6,11 +6,11 @@
             <p>Already have an account? <span><a href="/login">Login</a></span></p>
             <div class="form-inner">
                 <label for="email">Email</label>
-                <input type="text" placeholder="Enter your email">
+                <input type="text" placeholder="Enter your email" v-model="userData.email" required>
                 <label for="password">Password</label>
-                <input type="text" placeholder="Enter your password">
+                <input type="text" placeholder="Enter your password" v-model="userData.password" required>
                 <label for="confirm-password">Confirm password</label>
-                <input type="text" placeholder="confirm your password">
+                <input type="text" placeholder="confirm your password" v-model="userData.confirmPassword">
             </div>
             
 
@@ -27,8 +27,21 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
 
+    data() {
+   return {
+      userData: { email: '', password: '', confirmPassword: ''}
+   }
+},
+
+methods: {
+    postData(){
+      axios.post()
+    }
+}
 }
 </script>
 

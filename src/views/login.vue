@@ -6,9 +6,9 @@
             <p>Don't have an account? <span><a href="/signup">Sign up</a></span></p>
             <div class="form-inner">
                 <label for="email">Email</label>
-                <input type="text" placeholder="Enter your email">
+                <input type="text" placeholder="Enter your email" required v-model="loginData.email">
                 <label for="password">Password</label>
-                <input type="text" placeholder="Enter your password">
+                <input type="text" placeholder="Enter your password" required v-model="loginData.password">
                
             </div>
             
@@ -22,12 +22,27 @@
         <img :src="require('@/assets/login.svg')" alt="Card Image">
     </div>
    </div>
+
+   
   
 </template>
 
 <script>
+import axios from 'axios'
 export default {
 
+
+data() {
+   return {
+      loginData: { email: '', password: ''}
+   }
+},
+
+methods: {
+    postData(){
+      axios.post()
+    }
+}
 }
 </script>
 
