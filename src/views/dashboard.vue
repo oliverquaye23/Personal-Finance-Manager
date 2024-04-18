@@ -28,8 +28,8 @@
     </button>
     <div class="sidebar-items">
         <ul>
-            <li><a href=""><img :src="require('@/assets/overview.svg')" alt="logo" style="width: 20px; margin-right: 10px;" >Overview</a></li>
-            <li><a href=""><img :src="require('@/assets/credit-card.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Expenses</a></li>
+            <li><a href="/dasboard"><img :src="require('@/assets/overview.svg')" alt="logo" style="width: 20px; margin-right: 10px;" >Overview</a></li>
+            <li><a href="/expenses"><img :src="require('@/assets/credit-card.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Expenses</a></li>
             <li><a href=""><img :src="require('@/assets/wallet.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Budgets</a></li>
             <li><a href=""><img :src="require('@/assets/target.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Financial Goals</a></li>
             <li><a href=""><img :src="require('@/assets/settings.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Settings</a></li>
@@ -127,6 +127,9 @@
       </div>
     </div>
  </div>
+
+ 
+
 
  </div>
  
