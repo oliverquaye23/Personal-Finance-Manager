@@ -4,6 +4,7 @@ import login from '../views/login.vue';
 import Landingpage from '@/views/landingpage.vue';
 import dashboard from '@/views/dashboard.vue';
 import expenses from '@/views/expenses.vue'
+import budgets from '@/views/budgets.vue'
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     path: '/signup',
     name: 'register',
     component: Register
+  },
+  {
+    path: '/budgets',
+    name: 'budgets',
+    component: budgets
   },
   {
     path: '/expenses',

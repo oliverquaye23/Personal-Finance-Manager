@@ -24,13 +24,13 @@
    <div class="dashboard" style="display: flex;">
     <div class="sidebar">
        <button type="button" class="btn btn-primary btn-lg" style="color: white; font-size: 14px; padding: 5px; background-color: lightgreen; border: none;">
-         <router-link to="/signup"><i class="bi bi-plus"></i>create new account</router-link> 
+        <router-link to="/signup" style="color: white; text-decoration: none"><i class="bi bi-plus" style="color: white"></i>create new account</router-link> 
        </button>
        <div class="sidebar-items">
            <ul>
                <li><a href="/dashboard"><img :src="require('@/assets/overview.svg')" alt="logo" style="width: 20px; margin-right: 10px;" >Overview</a></li>
                <li><a href=""><img :src="require('@/assets/credit-card.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Expenses</a></li>
-               <li><a href=""><img :src="require('@/assets/wallet.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Budgets</a></li>
+               <li><a href="/budgets"><img :src="require('@/assets/wallet.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Budgets</a></li>
                <li><a href=""><img :src="require('@/assets/target.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Financial Goals</a></li>
                <li><a href=""><img :src="require('@/assets/settings.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Settings</a></li>
                <li> <router-link to="/"><a href=""><img :src="require('@/assets/log-out.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">logout</a></router-link> </li>

@@ -24,12 +24,12 @@
    <div class="dashboard" style="display: flex;">
     <div class="sidebar">
        <button type="button" class="btn btn-primary btn-lg" style="color: white; font-size: 14px; padding: 5px; background-color: lightgreen; border: none;">
-         <router-link to="/signup"><i class="bi bi-plus"></i>create new account</router-link> 
+        <router-link to="/signup" style="color: white; text-decoration: none"><i class="bi bi-plus" style="color: white"></i>create new account</router-link> 
        </button>
        <div class="sidebar-items">
            <ul>
                <li><a href="/dashboard"><img :src="require('@/assets/overview.svg')" alt="logo" style="width: 20px; margin-right: 10px;" >Overview</a></li>
-               <li><a href=""><img :src="require('@/assets/credit-card.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Expenses</a></li>
+               <li><a href="/expenses"><img :src="require('@/assets/credit-card.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Expenses</a></li>
                <li><a href=""><img :src="require('@/assets/wallet.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Budgets</a></li>
                <li><a href=""><img :src="require('@/assets/target.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Financial Goals</a></li>
                <li><a href=""><img :src="require('@/assets/settings.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Settings</a></li>
@@ -38,10 +38,22 @@
        </div>
     </div>
    
-    <div class="expenses" style="width: 100%;"> 
-     <h6 style="margin: 20px;">Expenses</h6>
+    <div class="budgets" style="width: 100%;"> 
+     <h6 style="margin: 20px;">Budgets</h6>
+     <div class="filter" style="display: flex">
+        <button type="button" class="btn btn-primary" style="background-color: lightgreen; font-size: 14px;color: white; border: none;padding: 0 10px; margin: 20px;">
+            <i class="bi bi-plus" style="color: white"></i>
+            Add budget
+        </button>
+        
+        <div class="search-box">
+            <input type="text" placeholder="search" >
+        </div>
+     </div>
+
      <table class="table table-striped table-hover">
      <thead>
+       <th>#</th>
        <th>Amount</th>
        <th>Category</th>
        <th>Date</th>
@@ -49,6 +61,7 @@
      </thead>
      <tbody>
        <tr style="border-left: 5px solid; border-color: lightgreen">
+        <td>1</td>
          <td>$25.00</td>
          <td>Groceries</td>
          <td>June 12, 2024</td>
@@ -58,8 +71,9 @@
          </td>
        </tr>
        <tr style="border-left: 5px solid; border-color: lightgreen">
+        <td>2</td>
          <td>$25.00</td>
-         <td>Groceries</td>
+         <td>Water</td>
          <td>June 12, 2024</td>
          <td>
            <button type="button" class="btn btn-danger" style="font-size: 14px; border-radius: 15px; color: white; margin-right: 5px; padding: 0 10px;">delete</button>
@@ -67,8 +81,9 @@
          </td>
        </tr>
        <tr style="border-left: 5px solid; border-color: lightgreen">
+        <td>3</td>
          <td>$25.00</td>
-         <td>Groceries</td>
+         <td>Electricity</td>
          <td>June 12, 2024</td>
          <td>
            <button type="button" class="btn btn-danger" style="font-size: 14px; border-radius: 15px; color: white; margin-right: 5px; padding: 0 10px;">delete</button>
@@ -76,8 +91,9 @@
          </td>
        </tr>
        <tr style="border-left: 5px solid; border-color: lightgreen">
+        <td>4</td>
          <td>$25.00</td>
-         <td>Groceries</td>
+         <td>Rent</td>
          <td>June 12, 2024</td>
          <td>
            <button type="button" class="btn btn-danger" style="font-size: 14px; border-radius: 15px; color: white; margin-right: 5px; padding: 0 10px;">delete</button>
@@ -181,11 +197,19 @@
        text-decoration: none;
        color: black;
    }
+
+   input{
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid;
+    border-color: rgb(228, 225, 222);
+    border-radius: 25px;
+   }
    
    .elements{
      margin: 20px;
      padding: 10px;
    }
    
-   </style>
    
+   </style>
