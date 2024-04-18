@@ -24,13 +24,13 @@
 <div class="dashboard">
  <div class="sidebar">
     <button type="button" class="btn btn-primary btn-lg" style="color: white; font-size: 14px; padding: 5px; background-color: lightgreen; border: none;">
-      <router-link to="/signup"><i class="bi bi-plus"></i>create new account</router-link> 
+      <router-link to="/signup" style="color: white; text-decoration: none"><i class="bi bi-plus" style="color: white"></i>create new account</router-link> 
     </button>
     <div class="sidebar-items">
         <ul>
-            <li><a href="/dasboard"><img :src="require('@/assets/overview.svg')" alt="logo" style="width: 20px; margin-right: 10px;" >Overview</a></li>
+            <li><a href="/dashboard"><img :src="require('@/assets/overview.svg')" alt="logo" style="width: 20px; margin-right: 10px;" >Overview</a></li>
             <li><a href="/expenses"><img :src="require('@/assets/credit-card.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Expenses</a></li>
-            <li><a href=""><img :src="require('@/assets/wallet.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Budgets</a></li>
+            <li><a href="/budgets"><img :src="require('@/assets/wallet.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Budgets</a></li>
             <li><a href=""><img :src="require('@/assets/target.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Financial Goals</a></li>
             <li><a href=""><img :src="require('@/assets/settings.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">Settings</a></li>
             <li> <router-link to="/"><a href=""><img :src="require('@/assets/log-out.svg')" alt="logo"  style="width: 20px; margin-right: 10px;">logout</a></router-link> </li>
@@ -40,23 +40,23 @@
 
  <div class="elements">
   <div class="message">
-    <h4>Welcome, <span style="color: lightgray;">Max Brandit</span></h4>
+    <h4>Welcome, <span style="color:gray;">Max Brandit</span></h4>
   </div>
   <div class="boxes">
     <div class="box1">
-      <h3 style="font-size: 13px; font-weight: 300; color: lightgray; margin-bottom: 5px;" >TOTAL AMOUNT</h3>
+      <h3 style="font-size: 13px; font-weight: 300; color:gray; margin-bottom: 5px;" >TOTAL AMOUNT</h3>
       <h2 style="font-size: 25px;">$500.00</h2>
     </div>
     <div class="box1">
-      <h3 style="font-size: 13px; font-weight: 300; color: lightgray; margin-bottom: 5px;" >RECEIVED</h3>
+      <h3 style="font-size: 13px; font-weight: 300; color:gray; margin-bottom: 5px;" >RECEIVED</h3>
       <h2 style="font-size: 25px;">$25,00.00</h2>
     </div>
     <div class="box1">
-      <h3 style="font-size: 13px; font-weight: 300; color: lightgray; margin-bottom: 5px;" >SENT</h3>
+      <h3 style="font-size: 13px; font-weight: 300; color:gray; margin-bottom: 5px;" >SENT</h3>
       <h2 style="font-size: 25px;">$30.00</h2>
     </div>
     <div class="box1">
-      <h3 style="font-size: 13px; font-weight: 300; color: lightgray; margin-bottom: 5px;" >BUDGET</h3>
+      <h3 style="font-size: 13px; font-weight: 300; color:gray; margin-bottom: 5px;" >BUDGET</h3>
       <h2 style="font-size: 25px;">$200.00</h2>
     </div>
   </div>
