@@ -23,9 +23,9 @@
 
 <div class="dashboard">
  <div class="sidebar">
-    <button type="button" class="btn btn-primary btn-lg" style="color: white; font-size: 14px; padding: 5px; background-color: lightgreen; border: none;">
-      <router-link to="/signup" style="color: white; text-decoration: none"><i class="bi bi-plus" style="color: white"></i>create new account</router-link> 
-    </button>
+  <button type="button" class="btn btn-primary btn-lg" style="color: white; font-size: 14px; padding: 5px; background-color: lightgreen; border: none;">
+        <router-link to="/" style="color: white; text-decoration: none"><i class="bi bi-house-door-fill" style="color: white;" ></i>Home</router-link> 
+       </button>
     <div class="sidebar-items">
         <ul>
             <li><a href="/dashboard"><img :src="require('@/assets/overview.svg')" alt="logo" style="width: 20px; margin-right: 10px;" >Overview</a></li>
@@ -49,11 +49,11 @@
     </div>
     <div class="box1">
       <h3 style="font-size: 13px; font-weight: 300; color:gray; margin-bottom: 5px;" >RECEIVED</h3>
-      <h2 style="font-size: 25px;">$25,00.00</h2>
+      <h2 style="font-size: 25px; display: flex; gap: 5px;">$2,500.00 <span style="font-size: 18px; color: green">+50%&uarr;</span></h2>
     </div>
     <div class="box1">
       <h3 style="font-size: 13px; font-weight: 300; color:gray; margin-bottom: 5px;" >SENT</h3>
-      <h2 style="font-size: 25px;">$30.00</h2>
+      <h2 style="font-size: 25px; display: flex; gap: 5px;">$30.00<span style="font-size: 18px; color: red">-25%&darr;</span></h2>
     </div>
     <div class="box1">
       <h3 style="font-size: 13px; font-weight: 300; color:gray; margin-bottom: 5px;" >BUDGET</h3>
@@ -186,12 +186,15 @@ export default {
     box-sizing: border-box;
 }
 .navbar{
+  position: fixed;
+  width: 100%;
   border-bottom: 1px solid;
   border-color: rgb(228, 225, 222);
   padding: 0 10px 0 10px;
   align-items: center;
   justify-content: space-between; 
   display: flex;
+  background-color: white;
 }
 .end{
     margin-right: 20px;
@@ -243,9 +246,11 @@ img{
 }
 
 .sidebar{
+  position: fixed;
     width: 200px;
     height: 100vh;
     padding: 10px;
+    margin-top: 50px;
 }
 ul li {
     list-style-type: none;
@@ -261,6 +266,8 @@ ul li a{
 .elements{
   margin: 20px;
   padding: 10px;
+  margin-left: 200px;
+  margin-top: 50px;
 }
 .boxes{
   display: flex;

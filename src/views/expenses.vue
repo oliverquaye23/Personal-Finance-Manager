@@ -23,8 +23,8 @@
    
    <div class="dashboard" style="display: flex;">
     <div class="sidebar">
-       <button type="button" class="btn btn-primary btn-lg" style="color: white; font-size: 14px; padding: 5px; background-color: lightgreen; border: none;">
-        <router-link to="/signup" style="color: white; text-decoration: none"><i class="bi bi-plus" style="color: white"></i>create new account</router-link> 
+      <button type="button" class="btn btn-primary btn-lg" style="color: white; font-size: 14px; padding: 5px; background-color: lightgreen; border: none;">
+        <router-link to="/" style="color: white; text-decoration: none"><i class="bi bi-house-door-fill" style="color: white;" ></i>Home</router-link> 
        </button>
        <div class="sidebar-items">
            <ul>
@@ -37,8 +37,8 @@
            </ul>
        </div>
     </div>
-   
-    <div class="expenses" style="width: 100%;"> 
+   <div class="elements"  style="width: 100%;">
+    <div class="expenses"> 
      <h6 style="margin: 20px;">Expenses</h6>
      <table class="table table-striped table-hover">
      <thead>
@@ -88,6 +88,8 @@
    </table>
    
    </div>
+   </div>
+    
    
 </div>
 
@@ -110,13 +112,16 @@
        box-sizing: border-box;
    }
    .navbar{
-     border-bottom: 1px solid;
-     border-color: rgb(228, 225, 222);
-     padding: 0 10px 0 10px;
-     align-items: center;
-     justify-content: space-between; 
-     display: flex;
-   }
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid;
+  border-color: rgb(228, 225, 222);
+  padding: 0 10px 0 10px;
+  align-items: center;
+  justify-content: space-between; 
+  display: flex;
+  background-color: white;
+}
    .end{
        margin-right: 20px;
        display: flex;
@@ -167,10 +172,12 @@
    } */
    
    .sidebar{
-       width: 200px;
-       height: 100vh;
-       padding: 10px;
-   }
+  position: fixed;
+    width: 200px;
+    height: 100vh;
+    padding: 10px;
+    margin-top: 50px;
+}
    ul li {
        list-style-type: none;
        font-weight: 500;
@@ -183,8 +190,10 @@
    }
    
    .elements{
-     margin: 20px;
-     padding: 10px;
-   }
+  margin: 20px;
+  padding: 10px;
+  margin-left: 200px;
+  margin-top: 50px;
+}
    
    </style>
