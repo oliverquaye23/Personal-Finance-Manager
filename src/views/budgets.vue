@@ -24,7 +24,7 @@
    <div class="dashboard" style="display: flex;">
     <div class="sidebar">
        <button type="button" class="btn btn-primary btn-lg" style="color: white; font-size: 14px; padding: 5px; background-color: lightgreen; border: none;">
-        <router-link to="/signup" style="color: white; text-decoration: none"><i class="bi bi-plus" style="color: white"></i>create new account</router-link> 
+        <router-link to="/" style="color: white; text-decoration: none"><i class="bi bi-house-door-fill" style="color: white;" ></i>Home</router-link> 
        </button>
        <div class="sidebar-items">
            <ul>
@@ -37,11 +37,11 @@
            </ul>
        </div>
     </div>
-   
-    <div class="budgets" style="width: 100%;"> 
+   <div class="elements" style="width: 100%;">
+    <div class="budgets" > 
      <h6 style="margin: 20px;">Budgets</h6>
      <div class="filter" style="display: flex">
-        <button type="button" class="btn btn-primary" style="background-color: lightgreen; font-size: 14px;color: white; border: none;padding: 0 10px; margin: 20px;">
+        <button type="button" class="btn btn-primary" style="background-color: lightgreen; font-size: 14px;color: white; border: none;padding: 0 10px; margin: 20px;" @click="toggleModal">
             <i class="bi bi-plus" style="color: white"></i>
             Add budget
         </button>
@@ -103,21 +103,50 @@
      </tbody>
    </table>
    
-   </div>
+   </div></div>
+    
    
-</div>
+   <div class="overlay" v-if="modalVisible">
+      <div class="wrapper">
+        <h2>Add your budget</h2>
+        <a href="#" class="close" @click="toggleModal">&times;</a>
+        <div class="content">
+          <div class="container">
+            <form>
+              <label for="category">Category</label>
+              <input type="text" placeholder="Enter budget category">
+              <label for="amount">Amount</label>
+              <input type="text" placeholder="Enter budgeted amount">
+              <label for="date">Date</label>
+              <input type="date">
+              <button type="submit">Add</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
     
     
    </template>
    
    <script>
-   
-   
-   export default {
-    
-   };
-   </script>
+export default {
+  data() {
+    return {
+      modalVisible: false
+    };
+  },
+  methods: {
+    toggleModal() {
+      this.modalVisible = !this.modalVisible;
+    }
+  }
+};
+</script>
+
    
    <style scoped>
    *{
@@ -126,13 +155,16 @@
        box-sizing: border-box;
    }
    .navbar{
-     border-bottom: 1px solid;
-     border-color: rgb(228, 225, 222);
-     padding: 0 10px 0 10px;
-     align-items: center;
-     justify-content: space-between; 
-     display: flex;
-   }
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid;
+  border-color: rgb(228, 225, 222);
+  padding: 0 10px 0 10px;
+  align-items: center;
+  justify-content: space-between; 
+  display: flex;
+  background-color: white;
+}
    .end{
        margin-right: 20px;
        display: flex;
@@ -183,10 +215,12 @@
    } */
    
    .sidebar{
-       width: 200px;
-       height: 100vh;
-       padding: 10px;
-   }
+  position: fixed;
+    width: 200px;
+    height: 100vh;
+    padding: 10px;
+    margin-top: 50px;
+}
    ul li {
        list-style-type: none;
        font-weight: 500;
@@ -207,9 +241,62 @@
    }
    
    .elements{
-     margin: 20px;
-     padding: 10px;
-   }
-   
-   
+  margin: 20px;
+  padding: 10px;
+  margin-left: 200px;
+  margin-top: 50px;
+}
+   .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 50%;
+  text-align: center;
+  position: relative; /* Establishes positioning context for absolute child */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  color: gray;
+}
+
+  form label{
+    font-weight: 500;
+    letter-spacing: 3px;
+  }
+  input[type=text]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 6px 0 16px 0;
+    resize: vertical;
+  }
+  input[type=submit]{
+    background-color: #413b3b;
+    color: #fff;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: 3px;
+  }
    </style>
