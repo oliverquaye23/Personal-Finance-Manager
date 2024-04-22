@@ -1,21 +1,23 @@
 <template>
    <div class="section">
     <div class="left">
-        <form >
+        <form @submit.prevent="signup">
             <h1>Sign up to medallion</h1>
             <p>Already have an account? <span><a href="/login">Login</a></span></p>
             <div class="form-inner">
                 <label for="email">Email</label>
-                <input type="text" placeholder="Enter your email" v-model="userData.email" required>
+                <input type="text" placeholder="Enter your email" v-model="data.email" required>
                 <label for="password">Password</label>
-                <input type="text" placeholder="Enter your password" v-model="userData.password" required>
+                <input type="text" placeholder="Enter your password" v-model="data.password" required>
                 <label for="confirm-password">Confirm password</label>
-                <input type="text" placeholder="confirm your password" v-model="userData.confirmPassword">
+                <input type="text" placeholder="confirm your password" v-model="data.confirmPassword">
             </div>
             
 
             <div class="btn">
-                <button>create a free account</button>
+                <button type="submit"> 
+                Create a free account
+                </button>
             </div>
         </form>
     </div>
@@ -23,26 +25,56 @@
         <img :src="require('@/assets/signup.svg')" alt="">
     </div>
    </div>
+
   
 </template>
 
 <script>
 import axios from 'axios';
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
+
+
+
 
 export default {
+  data() {
+    return {
+        
 
-    data() {
-   return {
-      userData: { email: '', password: '', confirmPassword: ''}
-   }
-},
+        data: {
+        email: '',
+        password: '',
+        confirmPassword: ''
+      }
+    };
+  },
+  methods: {
 
-methods: {
-    postData(){
-      axios.post()
+//     
+    async signup() {
+      try {
+        const { data } = await axios.post('http://localhost:3000/signup/', {
+          email: this.data.email,
+          password: this.data.password,
+          confirmPassword: this.data.confirmPassword
+        });
+        this.showToast('login successful!', 'success');
+      } catch (error) {
+        this.showToast('signup failed!', 'error');
+      }
+    },
+    showToast(message, type) {
+      toast[type](message, { autoClose: 1000 });
     }
-}
-}
+  }
+  }
+ 
+    
+
+
+
+
 </script>
 
 <style scoped>
@@ -116,5 +148,29 @@ button{
     background-color: black;
     color: white;
     font-weight: 300;
+}
+
+#toast-box{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+    }
+
+.toast{
+
+    width: 400px;
+    height: 80px;
+    background: #fff;
+    font-weight: 500;
+    margin: 15px 0;
+    color: black;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 </style>
