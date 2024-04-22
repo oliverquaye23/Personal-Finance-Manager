@@ -96,10 +96,11 @@
   <div class="feature1">
     <div class="illustration-text">
         <h1 style="font-size: 30px;">Easy Payments</h1>
-        <p>This system helps you to make necessary plans about your finances <br>
-            to help you avoid the situation of over spending and impulse buying. <br>
-            The system makes you more aware of your personal expenditure and budgets and <br>
-            helps make you financially disciplined.
+        <p>This system helps you to make secure transactions and<br>
+          implements robust security measures to safeguard users' financial <br>
+           information during transactions. By offering secure payment gateways <br>
+            and encryption technologies, users can feel confident about the safety <br>
+            of their transactions.
         </p>
     </div>
     <div class="illustration">
@@ -113,10 +114,10 @@
     </div>
     <div class="illustration-text">
         <h1 style="font-size: 30px;">Expenditure tracking</h1>
-        <p>This system helps you to make necessary plans about your finances <br>
-            to help you avoid the situation of over spending and impulse buying. <br>
-            The system makes you more aware of your personal expenditure and budgets and <br>
-            helps make you financially disciplined.
+        <p>This system empowers users to monitor their spending habits <br>
+           and achieve financial goals with greater ease. By offering intuitive <br>
+            tools for tracking expenditures, users gain visibility into where <br>
+             their money goes, allowing them to make informed decisions. 
         </p>
     </div>
   </div>
@@ -133,10 +134,11 @@
           <img :src="require('@/assets/Person1.jpg')" alt="">
           <div class="name">Max Brandit</div>
           <p>
-            This system helps you to make necessary plans about your finances <br>
-            to help you avoid the situation of over spending and impulse buying. <br>
-            The system makes you more aware of your personal expenditure and budgets and <br>
-            helps make you financially disciplined.
+            Using this financial web app has completely changed the 
+             way I manage my money. It's so easy to track my expenses 
+              and set budgets. I now have a clear picture of where my 
+               money is going and can plan ahead with confidence. Highly 
+                recommended for anyone looking to take control of their finances!
           </p>
         </div>
       </div>
@@ -145,10 +147,11 @@
           <img :src="require('@/assets/person2.jpg')" alt="">
           <div class="name">alice wright</div>
           <p>
-            This system helps you to make necessary plans about your finances <br>
-            to help you avoid the situation of over spending and impulse buying. <br>
-            The system makes you more aware of your personal expenditure and budgets and <br>
-            helps make you financially disciplined.
+            I've tried several financial apps, but this one stands 
+             out for its simplicity and effectiveness. It helped me 
+             identify unnecessary expenses and save more each month. 
+             The ability to categorize transactions and receive insightful 
+              reports has been invaluable.
           </p>
         </div>
       </div>
@@ -157,10 +160,11 @@
           <img :src="require('@/assets/person3.jpg')" alt="">
           <div class="name">sam winfrey</div>
           <p>
-            This system helps you to make necessary plans about your finances <br>
-            to help you avoid the situation of over spending and impulse buying. <br>
-            The system makes you more aware of your personal expenditure and budgets and <br>
-            helps make you financially disciplined.
+            As a busy professional, managing finances can be overwhelming. 
+             This app has made it  easy to stay on top of my 
+             spending and savings goals. I can quickly track my expenses and 
+              visualize my financial health. It's a game-changer for anyone who 
+               wants to achieve financial stability without the hassle.
           </p>
         </div>
       </div>
