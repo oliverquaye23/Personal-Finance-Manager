@@ -1,3 +1,22 @@
 {
-    "users":[]
+  "users": [
+    {
+      "id": "0dde",
+      "email": "oliver@fake.com",
+      "password": "12345",
+      "confirmPassword": "12345"
+    },
+    {
+      "id": "6d6b",
+      "email": "fred@base.com",
+      "password": "2341",
+      "confirmPassword": "2341"
+    },
+    {
+      "id": "1176",
+      "email": "francis@fake.com",
+      "password": "12345",
+      "confirmPassword": "12345"
+    }
+  ]
 }
