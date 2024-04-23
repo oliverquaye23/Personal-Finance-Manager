@@ -6,7 +6,7 @@
             <p>Already have an account? <span><a href="/login">Login</a></span></p>
             <div class="form-inner">
                 <label for="email">Email</label>
-                <input type="text" placeholder="Enter your email" v-model="data.email" required>
+                <input type="email" placeholder="Enter your email" v-model="data.email" required>
                 <label for="password">Password</label>
                 <input type="text" placeholder="Enter your password" v-model="data.password" required>
                 <label for="confirm-password">Confirm password</label>
@@ -30,23 +30,24 @@
 </template>
 
 <script>
+import{ref} from 'vue'
 import axios from 'axios';
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
 
 
-
-
 export default {
+
+  
   data() {
     return {
         
-
-        data: {
+       users:[],
+        data: ref({
         email: '',
         password: '',
         confirmPassword: ''
-      }
+      })
     };
   },
   methods: {
@@ -54,18 +55,25 @@ export default {
 //     
     async signup() {
       try {
-        const { data } = await axios.post('http://localhost:3000/signup/', {
+        const response = await axios.post('http://localhost:3000/users', {
           email: this.data.email,
           password: this.data.password,
           confirmPassword: this.data.confirmPassword
         });
+          
+        this.users.push(response) 
+       
         this.showToast('login successful!', 'success');
+        this.$router.push('/dashboard')
+        
+        
+
       } catch (error) {
         this.showToast('signup failed!', 'error');
       }
     },
     showToast(message, type) {
-      toast[type](message, { autoClose: 1000 });
+      toast[type](message, { autoClose: 5000 });
     }
   }
   }

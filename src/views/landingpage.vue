@@ -27,7 +27,7 @@
       management on this platform.
     </p>
     <button  class="cta" style="margin-bottom: 2rem;">
-      <RouterLink to="/dashboard" style="color: white;">Get started<i class="bi bi-arrow-right" style="color: white;"></i></RouterLink>
+      <RouterLink to="/signup" style="color: white;">Get started<i class="bi bi-arrow-right" style="color: white;"></i></RouterLink>
       
     </button>
     
@@ -116,8 +116,8 @@
         <h1 style="font-size: 30px;">Expenditure tracking</h1>
         <p>This system empowers users to monitor their spending habits <br>
            and achieve financial goals with greater ease. By offering intuitive <br>
-            tools for tracking expenditures, users gain visibility into where <br>
-             their money goes, allowing them to make informed decisions. 
+           tools for tracking expenditures, users gain visibility into where <br>
+           their money goes, allowing them to make informed decisions. 
         </p>
     </div>
   </div>
@@ -135,10 +135,10 @@
           <div class="name">Max Brandit</div>
           <p>
             Using this financial web app has completely changed the 
-             way I manage my money. It's so easy to track my expenses 
-              and set budgets. I now have a clear picture of where my 
-               money is going and can plan ahead with confidence. Highly 
-                recommended for anyone looking to take control of their finances!
+            way I manage my money. It's so easy to track my expenses 
+            and set budgets. I now have a clear picture of where my 
+            money is going and can plan ahead with confidence. Highly 
+            recommended for anyone looking to take control of their finances!
           </p>
         </div>
       </div>
@@ -148,10 +148,10 @@
           <div class="name">alice wright</div>
           <p>
             I've tried several financial apps, but this one stands 
-             out for its simplicity and effectiveness. It helped me 
-             identify unnecessary expenses and save more each month. 
-             The ability to categorize transactions and receive insightful 
-              reports has been invaluable.
+            out for its simplicity and effectiveness. It helped me 
+            identify unnecessary expenses and save more each month. 
+            The ability to categorize transactions and receive insightful 
+            reports has been invaluable.
           </p>
         </div>
       </div>
@@ -161,10 +161,10 @@
           <div class="name">sam winfrey</div>
           <p>
             As a busy professional, managing finances can be overwhelming. 
-             This app has made it  easy to stay on top of my 
-             spending and savings goals. I can quickly track my expenses and 
-              visualize my financial health. It's a game-changer for anyone who 
-               wants to achieve financial stability without the hassle.
+            This app has made it  easy to stay on top of my 
+            spending and savings goals. I can quickly track my expenses and 
+            visualize my financial health. It's a game-changer for anyone who 
+            wants to achieve financial stability without the hassle.
           </p>
         </div>
       </div>
@@ -177,7 +177,7 @@
     <img :src="require('@/assets/jerry.png')" alt="logo" style="width: 50px; margin-left: 20px;">
     <div class="search">
       <img src="~@/assets/search.png" alt="" class="search-img">
-      <input type="text" placeholder="Search">
+      <input type="text"  placeholder="Search">
     </div>
   </div>
   
@@ -212,8 +212,6 @@
   justify-content: space-between; 
   display: flex;
 }
-
-
 a{
   text-decoration: none;
 }
@@ -245,7 +243,6 @@ nav ul li a::after {
   transform: scaleX(0); 
   transition: transform 0.3s ease; 
 }
-
 nav ul li a:hover::after {
   transform: scaleX(1); 
 }

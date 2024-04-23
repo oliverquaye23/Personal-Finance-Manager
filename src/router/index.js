@@ -47,9 +47,6 @@ const router = createRouter({
 export default router;
 
 
-// const router = createRouter({
-//   history: createWebHashHistory(),
-//   routes
-// })
+
 
 
