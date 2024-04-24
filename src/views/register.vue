@@ -34,22 +34,29 @@ import{ref} from 'vue'
 import axios from 'axios';
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
+import dashboard from './dashboard.vue';
+
+
 
 
 export default {
+  components: { dashboard },
 
   
   data() {
     return {
         
        users:[],
+
         data: ref({
-        email: '',
+        email: ref('oliver@fake.com'),
         password: '',
         confirmPassword: ''
       })
     };
+    
   },
+  
   methods: {
 
 //     
@@ -60,7 +67,8 @@ export default {
           password: this.data.password,
           confirmPassword: this.data.confirmPassword
         });
-          
+
+      
         this.users.push(response) 
        
         this.showToast('login successful!', 'success');

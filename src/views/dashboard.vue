@@ -136,14 +136,17 @@
  
  
 </div>
- 
- 
+ <h1>{{ email }}</h1>
 </template>
 
 <script>
 import Chart from 'chart.js/auto';
 
 export default {
+
+  props:['email'],
+
+
   mounted() {
     this.renderChart();
   },

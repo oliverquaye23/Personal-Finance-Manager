@@ -167,9 +167,6 @@
        height: 100%;
        object-fit: cover;
    }
-   /* .dashboard{
-     display: flex;
-   } */
    
    .sidebar{
   position: fixed;
