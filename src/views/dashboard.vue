@@ -40,7 +40,7 @@
 
  <div class="elements">
   <div class="message">
-    <h4>Welcome, <span style="color:gray;">Max Brandit</span></h4>
+    <h4>Welcome, <span style="color:gray;">{{ email }}</span></h4>
   </div>
   <div class="boxes">
     <div class="box1">
@@ -136,15 +136,28 @@
  
  
 </div>
- <h1>{{ email }}</h1>
+ 
 </template>
 
 <script>
 import Chart from 'chart.js/auto';
+import { mapGetters } from 'vuex';
+
 
 export default {
 
-  props:['email'],
+  computed: {
+    ...mapGetters(['getEmail']), // Use the 'getEmail' getter from Vuex
+    email() {
+      // Access the email from Vuex state
+      const email = this.getEmail;
+      const parts = email.split('@');
+      const username = parts[0];
+      
+      return username; 
+    }
+  },
+
 
 
   mounted() {
