@@ -1,82 +1,10 @@
 {
   "users": [
     {
-      "id": "0dde",
+      "id": "1e4a",
       "email": "oliver@fake.com",
-      "password": "12345",
-      "confirmPassword": "12345"
-    },
-    {
-      "id": "6d6b",
-      "email": "fred@base.com",
-      "password": "2341",
-      "confirmPassword": "2341"
-    },
-    {
-      "id": "1176",
-      "email": "francis@fake.com",
-      "password": "12345",
-      "confirmPassword": "12345"
-    },
-    {
-      "id": "e8c4",
-      "email": "frank@fake.com",
-      "password": "21",
-      "confirmPassword": "21"
-    },
-    {
-      "id": "1b8b",
-      "email": "tfgrg@grth",
-      "password": "rg",
-      "confirmPassword": "rg"
-    },
-    {
-      "id": "75dc",
-      "email": "tfgrg@grth",
-      "password": "rg",
-      "confirmPassword": "rg"
-    },
-    {
-      "id": "d569",
-      "email": "tfgrg@grth",
-      "password": "rg",
-      "confirmPassword": "rg"
-    },
-    {
-      "id": "3d0a",
-      "email": "tfgrg@grth.com",
-      "password": "35",
-      "confirmPassword": "rg"
-    },
-    {
-      "id": "6bb1",
-      "email": "tfgrg@grth.com",
-      "password": "35",
-      "confirmPassword": "35"
-    },
-    {
-      "id": "c1ee",
-      "email": "qdfer@wsdf.com",
-      "password": "dws",
-      "confirmPassword": "wfe"
-    },
-    {
-      "id": "724f",
-      "email": "oliver@fake.com",
-      "password": "23",
-      "confirmPassword": "23"
-    },
-    {
-      "id": "8b40",
-      "email": "oliver@fake.com",
-      "password": "32",
-      "confirmPassword": "32"
-    },
-    {
-      "id": "0130",
-      "email": "oliver@fake.com",
-      "password": "1",
-      "confirmPassword": "1"
+      "password": "12",
+      "confirmPassword": "12"
     }
   ]
 }

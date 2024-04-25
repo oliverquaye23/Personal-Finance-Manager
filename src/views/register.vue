@@ -6,11 +6,11 @@
             <p>Already have an account? <span><a href="/login">Login</a></span></p>
             <div class="form-inner">
                 <label for="email">Email</label>
-                <input type="email" placeholder="Enter your email" v-model="data.email" required>
+                <input type="email" placeholder="Enter your email" v-model="email" required>
                 <label for="password">Password</label>
-                <input type="text" placeholder="Enter your password" v-model="data.password" required>
+                <input type="text" placeholder="Enter your password" v-model="password" required>
                 <label for="confirm-password">Confirm password</label>
-                <input type="text" placeholder="confirm your password" v-model="data.confirmPassword">
+                <input type="text" placeholder="confirm your password" v-model="confirmPassword">
             </div>
             
 
@@ -35,6 +35,8 @@ import axios from 'axios';
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
 import dashboard from './dashboard.vue';
+import { mapState, mapActions } from 'vuex';
+
 
 
 
@@ -47,29 +49,33 @@ export default {
     return {
         
        users:[],
-
-        data: ref({
-        email: ref('oliver@fake.com'),
-        password: '',
-        confirmPassword: ''
-      })
+      email:'',
+      password:'',
+      confirmPassword:''
+      
     };
     
   },
   
+
+
   methods: {
 
-//     
+    ...mapActions(['updateEmail', 'updatePassword', 'updateConfirmPassword']),
+    
     async signup() {
+      await this.updateEmail(this.email);
+      await this.updatePassword(this.password);
+      await this.updateConfirmPassword(this.confirmPassword);
       try {
         const response = await axios.post('http://localhost:3000/users', {
-          email: this.data.email,
-          password: this.data.password,
-          confirmPassword: this.data.confirmPassword
+          email: this.email,
+          password: this.password,
+          confirmPassword: this.confirmPassword
         });
 
       
-        this.users.push(response) 
+        this.users.push(response.data) 
        
         this.showToast('login successful!', 'success');
         this.$router.push('/dashboard')
