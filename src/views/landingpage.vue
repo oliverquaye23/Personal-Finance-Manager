@@ -4,15 +4,14 @@
 <nav class="navbar">
   <div class="logo-section">
     <a class="navbar-brand" href="#">
-     <img src="~@/assets/jerry.png" alt="logo" style="width: 40px; margin-left: 20px;">
+      <img :src="require('@/assets/jerry.png')" alt="logo" style="width: 40px; margin-left: 20px;">
     </a>
   </div>
   <div class="end">
     <ul>
       <li>
-        
-        <RouterLink to="/">Sign up<img src="~@/assets/sign-up.svg" alt="sign-up" style="width: 14px;"></RouterLink>
-        <RouterLink to="/login">Sign in<img src="~@/assets/sign-in.svg" alt="sign-in" style="width: 14px;"></RouterLink>
+        <RouterLink to="/signup">Sign up<img :src="require('@/assets/sign-up.svg')" alt="" style="width: 14px;"></RouterLink>
+        <RouterLink to="/login">Sign in<img :src="require('@/assets/sign-in.svg')" alt="" style="width: 14px;"></RouterLink>
       </li>
     </ul>
   </div>
@@ -21,14 +20,14 @@
 <!-- Hero Section -->
 <div class="main">
   <div class="left-col">
-    <h1 style="margin-bottom: 2rem;">Welcome to Muse</h1>
+    <h1 style="margin-bottom: 2rem;">Welcome to Medallion</h1>
     <p style="margin-bottom: 2rem;">
-      Explore our outstanding  finance management system. Browse our event catalogue to
+      Explore our outstanding  finance management system. Browse our catalogue to
       find exciting plans that <br>suits your interests. sign up now to enjoy seamless finance <br>
       management on this platform.
     </p>
     <button  class="cta" style="margin-bottom: 2rem;">
-      <RouterLink to="/" style="color: white;">Get started<img src="~@/assets/arrow.svg" alt="arrrow" class="arrow"></RouterLink>
+      <RouterLink to="/signup" style="color: white;">Get started<i class="bi bi-arrow-right" style="color: white;"></i></RouterLink>
       
     </button>
     
@@ -53,94 +52,144 @@
 <h1 style="font-size: 35px; text-align: center; margin-top: 2rem;">Platform Benefits</h1>
 <div class="main-container">
   <div class="section1">
-    <img src="~@/assets/event-access.png" alt="" >
+    <img :src="require('@/assets/event-access.png')" alt="" >
     <p style="font-size: 12px; text-align: center;">
       Access a 100+ budget plans <br>on this platform.
     </p>
   </div>
   <div class="section1">
-    <img src="~@/assets/people.png" alt="">
+    <img :src="require('@/assets/people.png')" alt="">
     <p style="font-size: 12px; text-align: center;">
-      Reach a million<br>viewers.
+      connecting you with your<br>business people.
     </p>
   </div>
   <div class="section1">
-    <img src="~@/assets/track.png" alt="" >
+    <img :src="require('@/assets/track.png')" alt="" >
     <p style="font-size: 12px; text-align: center;">
       Track your expenditure <br>with ease
     </p>
   </div>
   <div class="section1">
-    <img src="~@/assets/receipt.png" alt="" >
+    <img :src="require('@/assets/receipt.png')" alt="" >
     <p style="font-size: 12px; text-align: center;">
       Quick transactions with ease<br>
     </p>
   </div>
 </div>
-<!-- Events section -->
-<!-- <h1 style="font-size: 35px; text-align: center; margin-top: 2rem;">Events </h1>
-<div class="card-container">
-  <div class="cards">
-    <img src="~@/assets/cardimage1.jpg" alt="">
-    <div class="card-content">
-      <h3>Party</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus quos illo,</p>
-      <a href="#" class="cta">Get ticket</a>
+<!-- Features -->
+<div class="features">
+  <h1 style="font-size: 35px; text-align: center; margin-top: 2rem; margin-bottom: 2rem;">Features</h1>
+
+  <div class="feature1">
+    <div class="illustration">
+      <img :src="require('@/assets/analytics.svg')" alt="" style="width: 400px;">
+    </div>
+    <div class="illustration-text">
+        <h1 style="font-size: 30px;">Informed planning</h1>
+        <p>This system helps you to make necessary plans about your finances <br>
+            to help you avoid the situation of over spending and impulse buying. <br>
+            The system makes you more aware of your personal expenditure and budgets and <br>
+            helps make you financially disciplined.
+        </p>
     </div>
   </div>
-  <div class="cards">
-    <img src="~@/assets/cardimage1.jpg" alt="">
-    <div class="card-content">
-      <h3>Party</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus quos illo,</p>
-      <a href="#" class="cta">Get ticket</a>
+  <div class="feature1">
+    <div class="illustration-text">
+        <h1 style="font-size: 30px;">Easy Payments</h1>
+        <p>This system helps you to make secure transactions and<br>
+          implements robust security measures to safeguard users' financial <br>
+           information during transactions. By offering secure payment gateways <br>
+            and encryption technologies, users can feel confident about the safety <br>
+            of their transactions.
+        </p>
     </div>
-  </div>
-  <div class="cards">
-    <img src="~@/assets/cardimage1.jpg" alt="">
-    <div class="card-content">
-      <h3>Party</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus quos illo,</p>
-      <a href="#" class="cta">Get ticket</a>
+    <div class="illustration">
+      <img :src="require('@/assets/payments.svg')" alt="" style="width: 400px;">
     </div>
+    
   </div>
-  <div class="cards">
-    <img src="~@/assets/cardimage1.jpg" alt="">
-    <div class="card-content">
-      <h3>Party</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus quos illo,</p>
-      <a href="#" class="cta">Get ticket</a>
+  <div class="feature1">
+    <div class="illustration">
+      <img :src="require('@/assets/expenditure.svg')" alt="" style="width: 400px;">
+    </div>
+    <div class="illustration-text">
+        <h1 style="font-size: 30px;">Expenditure tracking</h1>
+        <p>This system empowers users to monitor their spending habits <br>
+           and achieve financial goals with greater ease. By offering intuitive <br>
+           tools for tracking expenditures, users gain visibility into where <br>
+           their money goes, allowing them to make informed decisions. 
+        </p>
     </div>
   </div>
 </div>
-<hr>
-<!-- Partners Section -->
-<!-- <div class="partners">
-  <h1 style="font-size: 35px; text-align: center; margin-top: 2rem;">Partners </h1>
-  <div class="part">
-    <div class="p1">
-      <img src="~@/assets/logos1.png" alt="">
-    </div>
-    <div class="p1">
-      <img src="~@/assets/logos2.jpg" alt="">
-    </div>
-    <div class="p1">
-      <img src="~@/assets/logos3.png" alt="">
-    </div>
-    <div class="p1">
-      <img src="~@/assets/logos4.png" alt="">
-    </div>
+<!-- Testimonials -->
+<div class="testimonials">
+  <div class="inner">
+    <h1 style="font-size: 35px; text-align: center; margin-top: 2rem;">Testimonials</h1>
+    <div class="border"></div>
 
+    <div class="row">
+      <div class="col">
+        <div class="testimonial">
+          <img :src="require('@/assets/Person1.jpg')" alt="">
+          <div class="name">Max Brandit</div>
+          <p>
+            Using this financial web app has completely changed the 
+            way I manage my money. It's so easy to track my expenses 
+            and set budgets. I now have a clear picture of where my 
+            money is going and can plan ahead with confidence. Highly 
+            recommended for anyone looking to take control of their finances!
+          </p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="testimonial">
+          <img :src="require('@/assets/person2.jpg')" alt="">
+          <div class="name">alice wright</div>
+          <p>
+            I've tried several financial apps, but this one stands 
+            out for its simplicity and effectiveness. It helped me 
+            identify unnecessary expenses and save more each month. 
+            The ability to categorize transactions and receive insightful 
+            reports has been invaluable.
+          </p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="testimonial">
+          <img :src="require('@/assets/person3.jpg')" alt="">
+          <div class="name">sam winfrey</div>
+          <p>
+            As a busy professional, managing finances can be overwhelming. 
+            This app has made it  easy to stay on top of my 
+            spending and savings goals. I can quickly track my expenses and 
+            visualize my financial health. It's a game-changer for anyone who 
+            wants to achieve financial stability without the hassle.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>  -->
-
+</div>
 <!-- Footer -->
 <footer>
   <div class="row-1">
-    <img src="~@/assets/jerry.png" alt="logo" style="width: 40px; margin: 20px;">
+    <img :src="require('@/assets/jerry.png')" alt="logo" style="width: 50px; margin-left: 20px;">
     <div class="search">
       <img src="~@/assets/search.png" alt="" class="search-img">
-      <input type="text" placeholder="Search">
+      <input type="text"  placeholder="Search">
+    </div>
+  </div>
+  
+  <div class="row-2">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/signin">Sign in</a></li>
+      <li><a href="/signup">Sign up</a></li>
+    </ul>
+    <div class="copyright">
+      All rights reserved &copy;
     </div>
   </div>
 </footer>
@@ -163,8 +212,6 @@
   justify-content: space-between; 
   display: flex;
 }
-
-
 a{
   text-decoration: none;
 }
@@ -196,7 +243,6 @@ nav ul li a::after {
   transform: scaleX(0); 
   transition: transform 0.3s ease; 
 }
-
 nav ul li a:hover::after {
   transform: scaleX(1); 
 }
@@ -215,15 +261,13 @@ nav ul li a:hover::after {
  .cta{
   background-color: black;
   color: white;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 100;
   border: none;
   padding: 3px 10px 3px 10px;
   border-radius: 18px;
  }
- .arrow{
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
-}
+ 
 .left-col{
   text-align: center;
   margin:  5em 0px 0px 10em;
@@ -259,13 +303,13 @@ p{
 
  .card1{
   grid-area: left;
-  background-image: url("../assets/pic3.jpg");
+  background-image: url("../assets/card.jpg");
  }
  .card2{
-  background-image: url("../assets/pic1.jpg");
+  background-image: url("../assets/finance.jpg");
  }
  .card3{
-  background-image: url('../assets/pic2.jpg');
+  background-image: url('../assets/money.jpg');
  }
 
  /* credibility section */
@@ -294,49 +338,63 @@ p{
   margin: 10px;
  }
 
-/* Events Section */
-.card-container{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 100px;
-}
-.cards{
-  width: 200px;
-  background-color:rgb(235, 247, 235);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+/* features*/
+.features{
   margin: 20px;
-}
-.cards img{
-  width: 100%;
-  height: 170px;
-}
-.card-content{
-  padding: 16px;
-}
-.card-content h3{
-  font-size: 28px;
-  margin-bottom: 8px;
-}
-.card-content p{
-  color: #666;
-  font-size: 15px;
-  line-height: 1.3;
-  margin-bottom: 10px;
-}
+  padding: 20px;
 
-/* Partners */
-.part{
-  margin: 30px;
+}
+.feature1{
   display: flex;
-  justify-content: space-evenly;
+  gap: 20px;
+  margin: 40px;
 }
-.p1 img{
-  height: 50px;
+.testimonials{
+  padding: 40px 0;
+  background: #f1f1f1;
+  color: #434343;
+  text-align: center;
 }
-
+.inner{
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+.border{
+  width: 160px;
+  height: 5px;
+  background: #079979;
+  margin: 26px auto;
+  border: none;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.col{
+  flex: 33.33%;
+  max-width: 33.33%;
+  box-sizing: border-box;
+  padding: 15px;
+ 
+}
+.testimonial{
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+}
+.testimonial img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.name{
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
 /* footer */
 footer{
   background-color: rgb(11, 12, 12);
@@ -346,6 +404,22 @@ footer{
 .row-1{
   display:flex;
   justify-content: space-between;
+}
+.row-2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.row-2 ul li a{
+  text-decoration: none;
+  color: #a79e9e;
+  font-size: 13px;
+}
+.copyright{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 200;
 }
 .search{
   margin: 20px;

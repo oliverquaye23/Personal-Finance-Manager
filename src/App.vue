@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import register from './views/register.vue'
 
 export default {
   name: 'App',

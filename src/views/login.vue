@@ -1,33 +1,82 @@
 <template>
    <div class="section">
     <div class="left">
-        <form >
+        <form @submit.prevent="login">
             <h1>Login to medallion</h1>
-            <p>Don't have an account? <span><a href="/">Sign up</a></span></p>
+            <p>Don't have an account? <span><a href="/signup">Sign up</a></span></p>
             <div class="form-inner">
                 <label for="email">Email</label>
-                <input type="text" placeholder="Enter your email">
+                <input type="email" placeholder="Enter your email" required v-model="loginData.email">
                 <label for="password">Password</label>
-                <input type="text" placeholder="Enter your password">
+                <input type="text" placeholder="Enter your password" required v-model="loginData.password">
                
             </div>
             
 
             <div class="btn">
-                <button>Login</button>
+                <button type="submit">Login</button>
             </div>
         </form>
     </div>
     <div class="right">
-        <img :src="require('@/assets/card.jpg')" alt="Card Image">
+        <img :src="require('@/assets/login.svg')" alt="Card Image">
     </div>
    </div>
+
+   
   
 </template>
 
 <script>
+import{ref} from 'vue'
+import axios from 'axios';
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
+
 export default {
 
+
+data() {
+   return {
+      loginData:ref( {
+         email: '', 
+         password: ''
+        })
+   }
+},
+
+methods: {
+
+    async login(){
+        try{
+            const Data = await axios.get('http://localhost:3000/users',
+        { params:{
+            email:this.loginData.email,
+            password:this.loginData.password}
+        });
+        // console.log("axios response -> ",Data)
+        // console.log("actual response -> ", Data?.data)
+        
+        if (Data?.data.length > 0) {
+          // User found, login successful
+          this.showToast('login successful!', 'success');
+        this.$router.push('/dashboard')
+          console.log('Login successful');
+          // Redirect to dashboard or perform other actions
+        } else {
+          // User not found, login failed
+          this.showToast('login failed!', 'error');
+        }
+
+    }catch(error){
+         console.log(error)
+    }
+    },
+
+    showToast(message, type) {
+      toast[type](message, { autoClose: 5000 });
+    }
+}
 }
 </script>
 
@@ -76,13 +125,12 @@ form{
   align-items: center;
   width: 50%; 
   height: 100vh; 
-  background-color: #f0f0f0; 
 }
 
 img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
+  width: 80%; 
+  height: 80%; 
+  
 }
 span a{
     text-decoration: none;
